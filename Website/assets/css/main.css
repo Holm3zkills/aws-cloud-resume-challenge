@@ -4,6 +4,22 @@
 /*
 	Eric Holmes Personal Portfolio Resume
 */
+/* Add this CSS to your existing stylesheet */
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    #header {
+        order: 1; /* Move the header to the top */
+    }
+    #nav {
+        order: 3; /* Move the navigation to the bottom */
+    }
+    #header footer {
+        order: 2; /* Move the footer to the middle */
+    }
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -29,22 +45,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-}
-/* Add this CSS to your existing stylesheet */
-@media only screen and (max-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    #header {
-        order: 1; /* Move the header to the top */
-    }
-    #nav {
-        order: 3; /* Move the navigation to the bottom */
-    }
-    footer {
-        order: 2; /* Move the footer to the middle */
-    }
 }
 
 ol, ul {
