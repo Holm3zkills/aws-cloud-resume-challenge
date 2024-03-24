@@ -1,8 +1,3 @@
-provider "aws" {
-    profile = "default"
-    region = "us-west-2"
-}
-
 resource "aws_lambda_function" "myfunc {
     filename            = data.archive_file.zip.output_path
     source_code_hash    = data.archive_file.zip.outputbase64sha256
