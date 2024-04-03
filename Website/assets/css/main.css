@@ -2702,10 +2702,11 @@ input, select, textarea {
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
+		max-height: 100vh;
 		position: fixed;
 		text-align: center;
 		top: 0;
-		width: 23em;
+		width: vw;
 		right: 0;
 	}
 
