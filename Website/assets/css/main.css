@@ -131,7 +131,6 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
 /* Basic */
 
 	html {
@@ -1814,15 +1813,34 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section.special, article.special {
-		text-align: center;
-	}
+/* Existing CSS code for the header */
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #4acaa8; /* Adjust as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+    z-index: 1000; /* Ensure the header appears above other content */
+    text-align: right; /* Align content to the right */
+    max-width: 300px; /* Adjust the maximum width as needed */
+    width: 100%; /* Ensure header fills the width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    color: #ffffff; /* Set text color to white */
+}
 
-	header p {
-		color: #aaa;
-		position: relative;
-		margin: 0 0 1.6875em 0;
-	}
+/* New CSS code for header p */
+#header p {
+    color: #ffffff; /* Set text color to white */
+    position: relative;
+    margin: 0 0 1.6875em 0;
+}
+
+/* New CSS code for sections and articles */
+section.special, article.special {
+    text-align: center;
+}
+
 
 	header h2 + p {
 		font-size: 1.25em;
