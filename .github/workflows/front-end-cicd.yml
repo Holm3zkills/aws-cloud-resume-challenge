@@ -31,8 +31,17 @@ jobs:
             --exclude ".gitignore"
 
       - name: Invalidate CloudFront cache
-        if: ${{ env.CF_ID != '' }}
         run: |
-          aws cloudfront create-invalidation \
-            --distribution-id "$CF_ID" \
-            --paths "/*"
+          DIST_ID="$CF_ID"
+          if [ -z "$DIST_ID" ]; then
+            echo "No CLOUDFRONT_DISTRIBUTION_ID secret set; auto-discovering by alias..."
+            DIST_ID=$(aws cloudfront list-distributions \
+              --query "DistributionList.Items[?contains(Aliases.Items, 'resume.eholmes.net')].Id | [0]" \
+              --output text)
+          fi
+          if [ -z "$DIST_ID" ] || [ "$DIST_ID" = "None" ]; then
+            echo "ERROR: could not determine CloudFront distribution ID for resume.eholmes.net"
+            exit 1
+          fi
+          echo "Invalidating CloudFront distribution $DIST_ID"
+          aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
