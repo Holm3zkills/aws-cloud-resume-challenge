@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Holmes — IT Solutions Architect</title>
+
+<meta name="description" content="Eric Holmes — IT Solutions Architect in Renton, WA. AWS Certified Solutions Architect building resilient cloud and telecom network infrastructure.">
+<meta name="theme-color" content="#0a0f16">
+<link rel="canonical" href="https://resume.eholmes.net/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Eric Holmes — IT Solutions Architect">
+<meta property="og:description" content="AWS Certified Solutions Architect building resilient cloud and telecom network infrastructure.">
+<meta property="og:url" content="https://resume.eholmes.net/">
+<meta property="og:image" content="https://resume.eholmes.net/images/hero-ridge.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0f16'/><text y='.92em' x='50%25' text-anchor='middle' font-size='60' font-family='monospace' font-weight='600' fill='%23f5a524'>eh</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person","name":"Eric Holmes",
+  "jobTitle":"IT Solutions Architect",
+  "email":"mailto:ericmholmes55@yahoo.com","telephone":"+1-425-753-2593",
+  "url":"https://resume.eholmes.net/",
+  "address":{"@type":"PostalAddress","addressLocality":"Renton","addressRegion":"WA","addressCountry":"US"},
+  "sameAs":["https://www.linkedin.com/in/eric-holmes-67002077/","https://github.com/Holm3zkills"],
+  "alumniOf":{"@type":"CollegeOrUniversity","name":"University of Phoenix"},
+  "knowsAbout":["Amazon Web Services","Cloud Architecture","Network Engineering","Telecommunications","Python","SQL"]
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   TOKENS — committed single (dark) theme. Every colour is painted
+   explicitly so the page holds on any host background.
+   ═══════════════════════════════════════════════════════════════════ */
+:root{
+  --ground:#0a0f16;
+  --ground-2:#0c131b;
+  --surface:#121a25;
+  --surface-2:#18222f;
+  --line:#1e2a38;
+  --line-2:#2a3a4c;
+
+  --ink:#e9eef5;
+  --ink-2:#b6c4d4;
+  --ink-3:#8ba0b8;
+
+  --amber:#f5a524;
+  --amber-2:#ffc061;
+  --amber-dim:#8a5f16;
+  --amber-wash:rgba(245,165,36,.09);
+  --amber-line:rgba(245,165,36,.26);
+
+  --up:#3fb950;
+
+  --sans:'IBM Plex Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --cond:'IBM Plex Sans Condensed','IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --pad:clamp(1.15rem,4.2vw,2.25rem);
+  --maxw:1060px;
+  --nav-h:58px;
+
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 30px -14px rgba(0,0,0,.8);
+  --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 28px 60px -22px rgba(0,0,0,.9);
+}
+
+/* ═══ RESET ═══ */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 18px)}
+body{
+  font-family:var(--sans);
+  background:var(--ground);
+  color:var(--ink);
+  font-size:clamp(.95rem,.92rem + .17vw,1.03rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--cond);font-weight:700;line-height:1.12;letter-spacing:-.012em;text-wrap:balance}
+p{text-wrap:pretty}
+ul{list-style:none;padding:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:3px}
+::selection{background:var(--amber);color:#120c02}
+
+.skip{position:absolute;left:12px;top:-120px;z-index:200;background:var(--amber);color:#120c02;
+  font-weight:600;padding:.7rem 1.15rem;border-radius:6px;transition:top .18s ease}
+.skip:focus{top:11px}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+
+/* mono utility label used as every section kicker */
+.kicker{
+  font-family:var(--mono);font-size:.7rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--amber);
+  display:flex;align-items:center;gap:.7rem;
+}
+.kicker::before{content:"";width:18px;height:1px;background:var(--amber);flex:none;opacity:.7}
+
+/* ═══════════════════════════════════════════════════════════════════
+   NAV
+   ═══════════════════════════════════════════════════════════════════ */
+.nav{
+  position:sticky;top:0;z-index:100;height:var(--nav-h);
+  background:rgba(10,15,22,.78);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border-bottom:1px solid transparent;transition:border-color .25s ease,background .25s ease;
+}
+.nav.stuck{border-bottom-color:var(--line);background:rgba(10,15,22,.94)}
+.nav__in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+
+.brand{font-family:var(--mono);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:.6rem;
+  letter-spacing:-.01em;padding-block:.35rem}
+.brand em{font-style:normal;color:var(--ink-3);font-weight:400}
+.led{width:7px;height:7px;border-radius:50%;background:var(--up);flex:none;
+  box-shadow:0 0 0 3px rgba(63,185,80,.14);animation:blink 3.4s ease-in-out infinite}
+@keyframes blink{0%,92%,100%{opacity:1}96%{opacity:.28}}
+
+.menu{display:flex;align-items:center;gap:.1rem}
+.menu a{font-size:.86rem;font-weight:450;color:var(--ink-2);padding:.5rem .72rem;border-radius:6px;
+  position:relative;transition:color .16s ease,background .16s ease}
+.menu a:hover{color:var(--ink);background:var(--surface)}
+.menu a.on{color:var(--amber)}
+.menu a.on::after{content:"";position:absolute;left:.72rem;right:.72rem;bottom:.22rem;height:1.5px;background:var(--amber);border-radius:2px}
+.menu .pdf{
+  margin-left:.5rem;font-family:var(--mono);font-size:.76rem;font-weight:500;letter-spacing:.02em;
+  padding:.48rem .85rem;border:1px solid var(--line-2);border-radius:6px;color:var(--ink);
+  transition:border-color .16s ease,color .16s ease,background .16s ease}
+.menu .pdf:hover{border-color:var(--amber);color:var(--amber);background:var(--amber-wash)}
+
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:6px}
+.burger:hover{border-color:var(--line-2)}
+.burger i{display:block;width:16px;height:1.5px;background:var(--ink);border-radius:2px;position:relative;transition:background .2s ease}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .22s ease,top .22s ease}
+.burger i::before{top:-5px}
+.burger i::after{top:5px}
+.burger[aria-expanded="true"] i{background:transparent}
+.burger[aria-expanded="true"] i::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] i::after{top:0;transform:rotate(-45deg)}
+
+@media (max-width:840px){
+  .burger{display:flex}
+  .menu{position:fixed;inset:var(--nav-h) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+    background:var(--ground-2);border-bottom:1px solid var(--line);padding:.4rem var(--pad) 1.1rem;
+    transform:translateY(-10px);opacity:0;pointer-events:none;
+    transition:opacity .2s ease,transform .2s ease;box-shadow:var(--shadow-lg);
+    max-height:calc(100dvh - var(--nav-h));overflow-y:auto}
+  .menu.open{transform:none;opacity:1;pointer-events:auto}
+  .menu a{padding:.85rem .2rem;font-size:1rem;border-bottom:1px solid var(--line)}
+  .menu a.on::after{display:none}
+  .menu .pdf{margin:.95rem 0 0;text-align:center;padding:.8rem;font-size:.85rem}
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   HERO — Mt Ellinor summit, duotoned into the palette
+   ═══════════════════════════════════════════════════════════════════ */
+.hero{position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(2.75rem,8vw,5.25rem) 0 clamp(3rem,7vw,4.5rem)}
+.hero__bg{
+  position:absolute;inset:0;z-index:-2;
+  background-image:url("images/hero-ridge.jpg");
+  background-size:cover;background-position:70% 62%;
+  opacity:1;
+}
+/* Scrim keeps the copy readable on the left while letting the ridgeline
+   actually read on the right — the photo is the point, not a texture. */
+.hero__scrim{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(96deg, rgba(10,15,22,.97) 0%, rgba(10,15,22,.93) 26%, rgba(10,15,22,.66) 52%, rgba(10,15,22,.28) 78%, rgba(10,15,22,.5) 100%),
+    linear-gradient(to bottom, rgba(10,15,22,.8) 0%, rgba(10,15,22,.1) 26%, rgba(10,15,22,.15) 55%, var(--ground) 97%);
+}
+@media (max-width:819px){
+  .hero{padding-bottom:clamp(3.5rem,12vw,5rem)}
+  .hero__bg{background-position:64% 78%}
+  /* Open a window for the ridgeline mid-hero, then close it again so the
+     caption never lands on the bright snow. */
+  .hero__scrim{
+    background:
+      linear-gradient(to bottom, rgba(10,15,22,.9) 0%, rgba(10,15,22,.94) 42%, rgba(10,15,22,.5) 66%, rgba(10,15,22,.78) 84%, var(--ground) 100%);
+  }
+}
+.hero__in{position:relative;display:grid;gap:clamp(1.75rem,4vw,2.75rem);grid-template-columns:1fr}
+/* On desktop the caption is pinned to the bottom-right of the hero rather than
+   taking a grid column, so the headline gets the full measure and its two
+   clauses each land on one line. */
+@media (min-width:900px){
+  .hero__in>.where{position:absolute;right:0;bottom:.25rem;margin:0}
+}
+
+.id{display:flex;align-items:center;gap:.95rem;margin-bottom:1.4rem}
+.id img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;
+  border:1px solid var(--line-2);box-shadow:0 0 0 4px rgba(10,15,22,.65)}
+.id__txt{font-family:var(--mono);font-size:.74rem;line-height:1.5;color:var(--ink-3);letter-spacing:.02em}
+.id__txt b{display:block;color:var(--amber);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.7rem}
+
+.hero h1{
+  font-size:clamp(2.05rem,1.02rem + 3.35vw,3.5rem);
+  font-weight:700;letter-spacing:-.028em;margin-bottom:1.05rem;
+}
+/* Two clauses of one sentence — each holds its own line so the turn at the
+   em dash lands, instead of wrapping wherever the viewport happens to break. */
+.hero h1 .cl{display:block;text-wrap:pretty}
+.hero h1 b{font-weight:inherit;color:var(--amber)}
+.lede{font-size:clamp(1rem,.96rem + .32vw,1.16rem);color:var(--ink-2);max-width:56ch;margin-bottom:1.7rem}
+.acts,.status{max-width:46rem}
+
+.status{display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-bottom:1.8rem;font-family:var(--mono);font-size:.72rem}
+.status li{border:1px solid var(--line);background:rgba(18,26,37,.72);color:var(--ink-2);
+  padding:.32rem .66rem;border-radius:4px;display:inline-flex;align-items:center;gap:.45rem;letter-spacing:.02em}
+.status li::before{content:"";width:4px;height:4px;border-radius:1px;background:var(--amber);flex:none}
+.status li.live::before{background:var(--up)}
+
+.acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;
+  padding:.7rem 1.2rem;border-radius:7px;font-size:.9rem;font-weight:500;letter-spacing:-.005em;
+  border:1px solid transparent;white-space:nowrap;
+  transition:transform .16s ease,background .16s ease,border-color .16s ease,color .16s ease}
+.btn svg{width:16px;height:16px;flex:none}
+.btn--go{background:var(--amber);color:#120c02;font-weight:600}
+.btn--go:hover{background:var(--amber-2);transform:translateY(-2px)}
+.btn--out{border-color:var(--line-2);color:var(--ink);background:rgba(18,26,37,.55)}
+.btn--out:hover{border-color:var(--amber);color:var(--amber);background:var(--amber-wash);transform:translateY(-2px)}
+.btn--sq{width:46px;height:46px;padding:0;border-color:var(--line-2);background:rgba(18,26,37,.55)}
+.btn--sq:hover{border-color:var(--amber);color:var(--amber);background:var(--amber-wash);transform:translateY(-2px)}
+
+.where{
+  font-family:var(--mono);font-size:.68rem;color:var(--ink-3);letter-spacing:.03em;
+  border-left:1px solid var(--amber-line);padding-left:.85rem;line-height:1.75;
+  align-self:end;width:15rem;text-wrap:pretty;
+}
+.where b{color:var(--ink-2);font-weight:500;display:block;letter-spacing:.08em}
+@media (max-width:819px){
+  .where{border-left:0;border-top:1px solid var(--amber-line);padding:.8rem 0 0;width:auto;max-width:34ch}
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════════════════════════════════ */
+section[id]{padding:clamp(3rem,7.5vw,5rem) 0;scroll-margin-top:calc(var(--nav-h) + 10px)}
+.band{background:var(--ground-2);border-block:1px solid var(--line)}
+
+.head{margin-bottom:clamp(1.7rem,3.8vw,2.6rem)}
+.head h2{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.15rem);margin-top:.75rem}
+.head p{color:var(--ink-3);margin-top:.55rem;max-width:60ch;font-size:.95rem}
+
+/* ── project cards ── */
+.projects{display:grid;gap:1rem;grid-template-columns:1fr}
+@media (min-width:680px){.projects{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:940px){.projects{grid-template-columns:repeat(3,1fr)}}
+
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.proj:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:var(--shadow-lg)}
+.proj__fig{aspect-ratio:16/10;background:var(--ground-2);border-bottom:1px solid var(--line);
+  overflow:hidden;display:grid;place-items:center;padding:.5rem}
+.proj__fig img{width:100%;height:100%;object-fit:cover;padding:0;transition:transform .45s ease}
+.proj:hover .proj__fig img{transform:scale(1.04)}
+.proj__fig svg{width:100%;height:auto}
+.proj__body{padding:1.15rem 1.25rem 1.35rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.proj__body h3{font-size:1.06rem}
+.proj__body p{color:var(--ink-2);font-size:.9rem;line-height:1.6}
+.stack{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:auto;padding-top:.45rem}
+.stack span{font-family:var(--mono);font-size:.66rem;letter-spacing:.02em;color:var(--amber);
+  background:var(--amber-wash);border:1px solid var(--amber-line);padding:.2rem .45rem;border-radius:4px}
+
+/* diagram internals */
+.dg-box{fill:#18222f;stroke:#2a3a4c;stroke-width:1}
+.dg-box-a{fill:rgba(245,165,36,.10);stroke:rgba(245,165,36,.45);stroke-width:1}
+.dg-t{font-family:'IBM Plex Mono',monospace;font-size:8.5px;fill:#b6c4d4;letter-spacing:.02em}
+.dg-t-a{font-family:'IBM Plex Mono',monospace;font-size:8.5px;fill:#f5a524;letter-spacing:.02em}
+.dg-s{font-family:'IBM Plex Mono',monospace;font-size:7px;fill:#8ba0b8;letter-spacing:.06em}
+.dg-l{stroke:#2a3a4c;stroke-width:1.1;fill:none}
+.dg-l-a{stroke:rgba(245,165,36,.5);stroke-width:1.1;fill:none}
+
+/* ── stack grid ── */
+.kit{display:grid;gap:1.4rem}
+@media (min-width:680px){.kit{grid-template-columns:repeat(2,1fr);gap:1.5rem 2.75rem}}
+.kit h3{font-family:var(--mono);font-size:.71rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}
+.chips span{font-size:.82rem;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);
+  padding:.32rem .68rem;border-radius:99px;transition:border-color .16s ease,color .16s ease}
+.chips span:hover{border-color:var(--amber-line);color:var(--amber)}
+
+/* ── timeline (chronological — the year is the structure) ── */
+.tl{position:relative;padding-left:1.75rem}
+.tl::before{content:"";position:absolute;left:5px;top:.5rem;bottom:.5rem;width:1px;background:var(--line)}
+.tl li{position:relative;padding:.75rem 0}
+.tl li::before{content:"";position:absolute;left:-1.75rem;top:1.2rem;width:11px;height:11px;border-radius:50%;
+  background:var(--ground-2);border:1.5px solid var(--line-2)}
+.tl li.new::before{border-color:var(--amber);background:var(--amber);box-shadow:0 0 0 4px var(--amber-wash)}
+.tl .yr{font-family:var(--mono);font-size:.72rem;color:var(--amber);letter-spacing:.08em}
+.tl .nm{font-weight:600;font-size:.97rem;letter-spacing:-.01em;margin-top:.1rem}
+.tl .by{color:var(--ink-3);font-size:.84rem}
+
+/* ── education ── */
+.edu{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:2.5rem}
+@media (min-width:760px){.edu{grid-template-columns:repeat(2,1fr)}}
+.edu article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.35rem 1.4rem}
+.edu .when{font-family:var(--mono);font-size:.71rem;color:var(--amber);letter-spacing:.07em;margin-bottom:.5rem}
+.edu h3{font-size:1.02rem;margin-bottom:.1rem}
+.edu .school{color:var(--ink-3);font-size:.86rem;margin-bottom:.75rem}
+.edu p{color:var(--ink-2);font-size:.89rem}
+.honors{display:inline-block;font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;font-weight:500;
+  color:#120c02;background:var(--amber);padding:.16rem .48rem;border-radius:4px;margin-bottom:.6rem}
+
+/* ── about ── */
+.about{display:grid;gap:1.9rem}
+@media (min-width:820px){.about{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:3rem}}
+.about p{color:var(--ink-2)}
+.about p+p{margin-top:.95rem}
+.likes{display:grid;gap:.45rem;align-content:start}
+.likes li{display:flex;align-items:center;gap:.7rem;padding:.6rem .85rem;font-size:.88rem;
+  color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:7px}
+.likes svg{width:16px;height:16px;color:var(--amber);flex:none}
+
+/* ── contact ── */
+.cta{background:radial-gradient(90% 130% at 8% 0%,rgba(245,165,36,.09),transparent 58%),var(--surface);
+  border:1px solid var(--line-2);border-radius:14px;padding:clamp(1.6rem,5vw,2.9rem);text-align:center}
+.cta h2{font-size:clamp(1.55rem,1.25rem + 1.4vw,2.15rem);margin:.85rem 0 .7rem}
+.cta .kicker{justify-content:center}
+.cta>p{color:var(--ink-2);max-width:46ch;margin:0 auto 1.6rem}
+.cta .acts{justify-content:center}
+.lines{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.2rem 1.4rem;margin-top:1.7rem;
+  padding-top:1.4rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.79rem;color:var(--ink-3)}
+.lines a,.lines span{display:inline-flex;align-items:center;min-height:26px;padding-block:.15rem}
+.lines a{transition:color .16s ease}
+.lines a:hover{color:var(--amber)}
+
+/* ── footer ── */
+footer{border-top:1px solid var(--line);background:var(--ground-2);padding:1.7rem 0}
+.foot{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;align-items:center;justify-content:space-between;
+  font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.02em}
+.hits{display:inline-flex;align-items:center;gap:.5rem}
+.hits[hidden]{display:none}
+.hits i{width:5px;height:5px;border-radius:50%;background:var(--up);flex:none;animation:blink 3.4s ease-in-out infinite}
+#views{color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SMALL SCREENS — nudge the mono micro-labels up. They read fine at
+   10.5px on a desktop monitor and are tight on a phone held at arm's
+   length, so they scale up rather than down as the viewport shrinks.
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width:640px){
+  .stack span{font-size:.72rem;padding:.24rem .5rem}
+  .honors{font-size:.7rem}
+  .kicker{font-size:.74rem}
+  .edu .when,.tl .yr{font-size:.76rem}
+  .where{font-size:.73rem}
+  .lines{font-size:.83rem;gap:.35rem 1.2rem}
+  .foot{font-size:.78rem}
+  .status{font-size:.76rem}
+  .id__txt{font-size:.78rem}
+  .id__txt b{font-size:.74rem}
+  .kit h3{font-size:.76rem}
+}
+/* Very small phones (≤360px): pull the display type in so the headline
+   never gets pushed to four lines. */
+@media (max-width:360px){
+  .hero h1{font-size:1.92rem;letter-spacing:-.02em}
+  .id img{width:48px;height:48px}
+  .btn{padding:.68rem 1rem;font-size:.87rem}
+}
+
+/* ── motion ── */
+.rv{opacity:0;transform:translateY(14px)}
+.rv.in{opacity:1;transform:none;transition:opacity .55s cubic-bezier(.22,.7,.3,1),transform .55s cubic-bezier(.22,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ═══ PRINT — Ctrl+P gives a clean paper resume ═══ */
+@media print{
+  :root{--ground:#fff;--ground-2:#fff;--surface:#fff;--surface-2:#fff;--ink:#000;--ink-2:#1a1a1a;
+        --ink-3:#555;--line:#ddd;--line-2:#bbb;--amber:#8a5f16;--amber-wash:#fff}
+  .nav,.burger,.hero__bg,.hero__scrim,.acts,.status,footer,.proj__fig,.where{display:none!important}
+  body{font-size:10.5pt;line-height:1.42}
+  section[id]{padding:.5rem 0;break-inside:avoid}
+  .proj,.edu article,.cta,.likes li{border-color:#ddd;box-shadow:none;break-inside:avoid}
+  .hero{padding:0 0 .5rem}
+  .projects{grid-template-columns:repeat(3,1fr)}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#666}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top"><span class="led" aria-hidden="true"></span>eric&nbsp;holmes<em>/&nbsp;architect</em></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i></button>
+    <nav class="menu" id="menu" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#record">Record</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <!-- TODO: drop Eric-Holmes-Resume.pdf beside index.html in the bucket -->
+      <a class="pdf" href="Eric-Holmes-Resume.pdf" download>Resume.pdf ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="wrap hero__in">
+    <div>
+      <div class="id">
+        <img src="images/avatar-eric.jpg" alt="Portrait of Eric Holmes" width="56" height="56">
+        <p class="id__txt"><b>IT Solutions Architect</b>Renton, WA · Greater Seattle</p>
+      </div>
+
+      <h1 id="h1">
+        <span class="cl">I build systems that <b>stay up</b>&#8212;</span>
+        <span class="cl">and fix the ones that <b>don't.</b></span>
+      </h1>
+
+      <p class="lede">Cloud and telecom infrastructure is my game: turning vague requirements into
+        architectures that survive real-world load, scale without drama, and get quieter over time.
+        AWS-certified, stubbornly self-taught, and most useful when the system is complicated,
+        critical, and nobody else wants to open it.</p>
+
+      <ul class="status">
+        <li class="live">Open to work</li>
+        <li>AWS SAA + CCP</li>
+        <li>Cloud &amp; network design</li>
+      </ul>
+
+      <div class="acts">
+        <a class="btn btn--go" href="Eric-Holmes-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download resume
+        </a>
+        <a class="btn btn--out" href="mailto:ericmholmes55@yahoo.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Get in touch
+        </a>
+        <a class="btn btn--sq" href="https://www.linkedin.com/in/eric-holmes-67002077/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.03-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V21h-4V9z"/></svg>
+        </a>
+        <a class="btn btn--sq" href="https://github.com/Holm3zkills" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.71 1.27 3.37.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.48.11-3.08 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.78.12 3.08.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="where">
+      <b>MT ELLINOR, WA</b>
+      Olympic National Forest, 5,944&nbsp;ft — where I go when the pager is quiet.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ WORK ═══ -->
+<section id="work" class="band" aria-labelledby="h-work">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Selected work</p>
+      <h2 id="h-work">Things I built, and what they run on</h2>
+      <p>Side projects, but production-shaped: each one is deployed, has a failure mode I had to think about, and is still running.</p>
+    </div>
+
+    <div class="projects">
+
+      <!-- ── 1. Cloud Resume Challenge — real architecture diagram ── -->
+      <article class="proj rv">
+        <div class="proj__fig">
+          <svg viewBox="0 0 340 200" role="img" aria-label="Architecture diagram: browser requests reach CloudFront and S3 for the static site, and a Lambda function URL and DynamoDB for the visitor count">
+            <!-- lanes -->
+            <text class="dg-s" x="96" y="26">STATIC</text>
+            <text class="dg-s" x="96" y="132">DYNAMIC</text>
+
+            <!-- browser -->
+            <rect class="dg-box-a" x="10" y="78" width="62" height="34" rx="4"/>
+            <text class="dg-t-a" x="21" y="99">browser</text>
+
+            <!-- static lane -->
+            <rect class="dg-box" x="96" y="34" width="86" height="34" rx="4"/>
+            <text class="dg-t" x="107" y="55">CloudFront</text>
+            <rect class="dg-box" x="206" y="34" width="66" height="34" rx="4"/>
+            <text class="dg-t" x="228" y="55">S3</text>
+            <rect class="dg-box" x="284" y="34" width="46" height="34" rx="4"/>
+            <text class="dg-t" x="291" y="49">Route</text>
+            <text class="dg-t" x="291" y="61">53</text>
+
+            <!-- dynamic lane -->
+            <rect class="dg-box" x="96" y="140" width="86" height="34" rx="4"/>
+            <text class="dg-t" x="112" y="161">Lambda</text>
+            <rect class="dg-box" x="206" y="140" width="90" height="34" rx="4"/>
+            <text class="dg-t" x="216" y="161">DynamoDB</text>
+
+            <!-- connectors -->
+            <path class="dg-l-a" d="M72 90 H84 V51 H92"/>
+            <path class="dg-l-a" d="M72 100 H84 V157 H92"/>
+            <path class="dg-l" d="M182 51 H202"/>
+            <path class="dg-l" d="M272 51 H280"/>
+            <path class="dg-l" d="M182 157 H202"/>
+
+            <!-- arrowheads -->
+            <path class="dg-l-a" d="M88 47.5 l4.5 3.5 -4.5 3.5" fill="none"/>
+            <path class="dg-l-a" d="M88 153.5 l4.5 3.5 -4.5 3.5" fill="none"/>
+            <path class="dg-l" d="M198 47.5 l4.5 3.5 -4.5 3.5"/>
+            <path class="dg-l" d="M198 153.5 l4.5 3.5 -4.5 3.5"/>
+
+            <text class="dg-s" x="10" y="192">HTTPS · custom domain · CI from GitHub</text>
+          </svg>
+        </div>
+        <div class="proj__body">
+          <h3>Cloud Resume Challenge</h3>
+          <p>This site. Static front end in S3 behind CloudFront with TLS and a Route&nbsp;53 custom domain; the visit counter in the footer is a Lambda function URL writing to DynamoDB. Stood up end to end rather than clicked through a tutorial.</p>
+          <div class="stack"><span>S3</span><span>CloudFront</span><span>Lambda</span><span>DynamoDB</span><span>Route 53</span></div>
+        </div>
+      </article>
+
+      <!-- ── 2. Cooking Pro — real screenshot ── -->
+      <article class="proj rv">
+        <div class="proj__fig">
+          <img src="images/proj-cookingpro.jpg" alt="Cooking Pro web app: a recipe search box beside generated ingredients and instructions" loading="lazy" width="1000" height="511">
+        </div>
+        <div class="proj__body">
+          <h3>Cooking Pro</h3>
+          <p>A GPT-backed recipe app that collapses a dozen open tabs into one query — type what you want, get ingredients and steps back in seconds. Built on the recipes from my own food blog, with a plain two-pane UI so there is nothing to learn.</p>
+          <div class="stack"><span>Python</span><span>OpenAI API</span><span>Gradio</span></div>
+        </div>
+      </article>
+
+      <!-- ── 3. Desktop Cleaner — before/after diagram ── -->
+      <article class="proj rv">
+        <div class="proj__fig">
+          <svg viewBox="0 0 340 200" role="img" aria-label="Diagram: a folder of mixed loose files is sorted by file type into Images, Docs and Archives folders">
+            <text class="dg-s" x="14" y="26">BEFORE</text>
+            <text class="dg-s" x="212" y="26">AFTER</text>
+
+            <!-- messy pile -->
+            <rect class="dg-box" x="14" y="38" width="112" height="136" rx="4"/>
+            <g class="dg-t">
+              <text x="26" y="60">IMG_0412.jpg</text>
+              <text x="26" y="80">taxes_2025.pdf</text>
+              <text x="26" y="100">notes.txt</text>
+              <text x="26" y="120">backup.zip</text>
+              <text x="26" y="140">screen.png</text>
+              <text x="26" y="160">w9.pdf</text>
+            </g>
+
+            <!-- arrow -->
+            <path class="dg-l-a" d="M136 106 H196"/>
+            <path class="dg-l-a" d="M191 101.5 l5 4.5 -5 4.5"/>
+            <text class="dg-s" x="141" y="98">sort()</text>
+
+            <!-- tidy bins -->
+            <rect class="dg-box-a" x="206" y="38" width="120" height="38" rx="4"/>
+            <text class="dg-t-a" x="218" y="56">Images/</text>
+            <text class="dg-s" x="218" y="68">2 files</text>
+
+            <rect class="dg-box-a" x="206" y="87" width="120" height="38" rx="4"/>
+            <text class="dg-t-a" x="218" y="105">Docs/</text>
+            <text class="dg-s" x="218" y="117">3 files</text>
+
+            <rect class="dg-box-a" x="206" y="136" width="120" height="38" rx="4"/>
+            <text class="dg-t-a" x="218" y="154">Archives/</text>
+            <text class="dg-s" x="218" y="166">1 file</text>
+
+            <text class="dg-s" x="14" y="192">runs unattended · by type and age</text>
+          </svg>
+        </div>
+        <div class="proj__body">
+          <h3>Desktop Cleaner</h3>
+          <p>A Python utility that watches a target directory and files everything into place by type and age. Written to kill a five-minute daily chore; it has run unattended ever since, which is the only review that matters.</p>
+          <div class="stack"><span>Python</span><span>pathlib</span><span>shutil</span><span>Automation</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STACK ═══ -->
+<section id="stack" aria-labelledby="h-stack">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Stack</p>
+      <h2 id="h-stack">What I work with</h2>
+      <p>Roughly ordered by depth. <!-- TODO: cut anything here you would not want to be interviewed on. --></p>
+    </div>
+
+    <div class="kit rv">
+      <div>
+        <h3>Cloud</h3>
+        <div class="chips"><span>AWS</span><span>EC2</span><span>S3</span><span>Lambda</span><span>VPC</span><span>IAM</span><span>CloudFront</span><span>Route 53</span><span>DynamoDB</span><span>CloudWatch</span></div>
+      </div>
+      <div>
+        <h3>Network &amp; Telecom</h3>
+        <div class="chips"><span>Routing &amp; switching</span><span>TCP/IP</span><span>DNS</span><span>VPN</span><span>Firewalls</span><span>Cisco IOS</span><span>Topology design</span></div>
+      </div>
+      <div>
+        <h3>Build</h3>
+        <div class="chips"><span>Python</span><span>SQL</span><span>HTML/CSS</span><span>JavaScript</span><span>Git</span><span>REST APIs</span></div>
+      </div>
+      <div>
+        <h3>Practice</h3>
+        <div class="chips"><span>Solution architecture</span><span>Systems analysis</span><span>Project management</span><span>IT governance</span><span>Team leadership</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RECORD ═══ -->
+<section id="record" class="band" aria-labelledby="h-record">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Record</p>
+      <h2 id="h-record">Certifications &amp; education</h2>
+      <p>Newest first. The AWS pair came while working full time.</p>
+    </div>
+
+    <ul class="tl rv">
+      <li class="new">
+        <p class="yr">2023</p>
+        <p class="nm">AWS Certified Solutions Architect — Associate</p>
+        <p class="by">Amazon Web Services</p>
+      </li>
+      <li class="new">
+        <p class="yr">2023</p>
+        <p class="nm">AWS Certified Cloud Practitioner</p>
+        <p class="by">Amazon Web Services</p>
+      </li>
+      <li>
+        <p class="yr">2018</p>
+        <p class="nm">Cisco Certified Entry Networking Technician</p>
+        <p class="by">Cisco</p>
+      </li>
+      <li>
+        <p class="yr">2015</p>
+        <p class="nm">Microsoft Technology Associate — Database Fundamentals</p>
+        <p class="by">Microsoft</p>
+      </li>
+      <li>
+        <p class="yr">2014</p>
+        <p class="nm">Bing Ads Accredited Professional</p>
+        <p class="by">Microsoft</p>
+      </li>
+    </ul>
+
+    <div class="edu rv">
+      <article>
+        <p class="when">Feb 2021 — Aug 2022</p>
+        <span class="honors">MAGNA CUM LAUDE</span>
+        <h3>B.S. Information Technology</h3>
+        <p class="school">University of Phoenix</p>
+        <p>Networking, security, database systems, systems analysis and IT governance — earned while working full time. Capstone: designed the cloud network for an internet banking platform, from topology through failover and access control.</p>
+      </article>
+      <article>
+        <p class="when">Mar 2012 — Jun 2013</p>
+        <h3>A.A. Computer Science</h3>
+        <p class="school">University of Phoenix</p>
+        <p>Foundations: programming languages, data structures, algorithms, software development, database administration and networking fundamentals.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" aria-labelledby="h-about">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Off the clock</p>
+      <h2 id="h-about">The rest of it</h2>
+    </div>
+
+    <div class="about rv">
+      <div>
+        <p>I came into IT the long way around, which is why I trust what I have built and tested over what a vendor slide claims. What I bring to a team is a combination that is rarer than it should be: someone who can design the architecture, explain it to the people paying for it, and then lead the work to ship it.</p>
+        <p>Most of what I know about telecom and cloud networking I learned being responsible for something that could not go down. The certifications came after the scar tissue.</p>
+        <p>Outside of work I am usually outside — the photo up top is from the summit of Mt Ellinor. I also keep a cooking blog, which is where the Cooking Pro recipes came from. Family first: my wife, my daughter, and whatever trail we have decided to drag ourselves up that weekend.</p>
+      </div>
+
+      <ul class="likes">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>Hiking &amp; trail running</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 21 4M14 4h7v7"/><circle cx="7.5" cy="16.5" r="2.5"/></svg>Snowboarding</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l1.5 5M5.5 17.5l5.5-9 4 9M9 6h3"/></svg>Mountain biking</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c2 1.6 4 1.6 6 0s4-1.6 6 0 4 1.6 6 0M4 14l8-9 8 9"/></svg>Paddleboarding</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2v9a3 3 0 0 0 6 0V2M10 2v9M17 2c-1.5 3-1.5 6 0 9v11M7 22V11"/></svg>Cooking &amp; food blogging</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="band" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="cta rv">
+      <p class="kicker">Contact</p>
+      <h2 id="h-contact">Let's build something that stays up.</h2>
+      <p>Open to solutions architect and cloud or network engineering roles, contract or full time. Email is the fastest way to reach me.</p>
+
+      <div class="acts">
+        <a class="btn btn--go" href="mailto:ericmholmes55@yahoo.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          ericmholmes55@yahoo.com
+        </a>
+        <a class="btn btn--out" href="https://www.linkedin.com/in/eric-holmes-67002077/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+
+      <div class="lines">
+        <a href="tel:+14257532593">(425) 753-2593</a>
+        <span>Renton, WA · Greater Seattle</span>
+        <a href="https://github.com/Holm3zkills" target="_blank" rel="noopener noreferrer">github.com/Holm3zkills</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Eric Holmes</span>
+    <!-- Visitor counter — same Lambda URL as before, now inlined.
+         .counter-number kept as a class so any other script still finds it. -->
+    <span class="hits" id="hits" hidden>
+      <i aria-hidden="true"></i><span class="counter-number" id="views">—</span>&nbsp;visits
+    </span>
+    <span>S3 · CloudFront · Lambda · DynamoDB</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ── mobile menu ── */
+  var burger = document.getElementById('burger'),
+      menu   = document.getElementById('menu');
+
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  }
+  burger.addEventListener('click', function () {
+    setMenu(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); burger.focus(); }
+  });
+  window.addEventListener('resize', function () { if (window.innerWidth > 840) setMenu(false); });
+
+  /* ── nav hairline on scroll ── */
+  var nav = document.getElementById('nav');
+  function onScroll() { nav.classList.toggle('stuck', window.scrollY > 8); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── scroll spy ── */
+  var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]')),
+      secs  = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+
+  if ('IntersectionObserver' in window && secs.length) {
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    secs.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ── reveal ── */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      items  = document.querySelectorAll('.rv');
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var ro = new IntersectionObserver(function (es, obs) {
+      es.forEach(function (en, i) {
+        if (!en.isIntersecting) return;
+        setTimeout(function () { en.target.classList.add('in'); }, i * 65);
+        obs.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    items.forEach(function (el) { ro.observe(el); });
+  }
+
+  /* ── visitor counter ─────────────────────────────────────────
+     Your Cloud Resume Challenge Lambda function URL, inlined.
+     It previously lived in assets/js/main.js line 171 — the copy in
+     assets/js/index.js defined updateCounter() but never called it,
+     so that file was dead code.
+
+     The line stays hidden until a real number arrives, so a cold
+     Lambda never shows an empty counter to a recruiter.
+     ──────────────────────────────────────────────────────────── */
+  var COUNTER_API = 'https://xkpruvizvvpkh3bcuapsmrddly0gzlpo.lambda-url.us-west-2.on.aws/';
+
+  fetch(COUNTER_API, { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var n = typeof d === 'number' ? d
+            : (d && (d.count != null ? d.count : d.views != null ? d.views : null));
+      if (n === null || isNaN(Number(n))) throw new Error('bad payload');
+      document.getElementById('views').textContent = Number(n).toLocaleString();
+      document.getElementById('hits').hidden = false;
+    })
+    .catch(function () { /* stay hidden */ });
+})();
+</script>
+</body>
+</html>
